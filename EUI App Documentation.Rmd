@@ -1,0 +1,44 @@
+---
+title: "EUI App Documentation"
+author: "SP"
+date: "April 6, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This document intends to cover the features of the EUI App that shows the variation of Energy Use Intensity (EUI) in Minneapolis for a few different types of buildings (private or public) and their use-types (offices, schools, etc.)
+
+## How to use the app?
+
+1. Select the building type in the first drop-down. There are two options available - private or public, depending on whether you'd like to          see the energy use of a private or public building.
+
+2. Select the building use type from the second drop-down. This could be an office use, school, multi-assembly, etc.
+
+3. The app will now generate a plot showing how the energy use for this particular building type has varied in Minneapolis over the years.
+
+4. The app has the following options available: <br/>
+   **Public building:** <br/>
+        - School <br/>
+        - Office <br/>
+        - Parking <br/>
+        - Other - Entertainment/Public Assembly <br/>
+   **Private building:** <br/>
+        - Hotel <br/>
+        - Multi-use Assembly <br/>
+        - Parking <br/>
+        - Office <br/>
+
+## General notes
+
+1. The original idea was to try and build a prediction model to predict the EUI for a building use-type based on the area. This idea was             however dropped since there might be other variables that more strongly influence the energy use of a building. This might include the           building materials used, HVAC system, other energy standards, etc. The idea was to build a training model using the data from 2014-16 and         then use the data from 2017 as a test set. However, since these other variables were not available, we chose to not build this model since        it may not be a realistic model. This is the reason the graph does not show the data points for 2017.
+
+2. The app may throw up an error **object 'year' not found** . This is because there was no data found for this combination of building              type,i.e. private or public and use-type, i.e. office, school, etc. So for example, if you were to try and look for Multi-Use Assembly in         public Building, you would get this error.But it should work if another combination is used as noted above.
+
+3. We only show data for 2015-16 for private building types since the data for the year 2014 was not available for download.
+
+4. The points on the graph represent the average EUI for that particular property type in that particular year. For the public building types, we    only selected building use-types that were having more than 10 instances and for private building types, this number was 25. So for example, if    you were to select offices under public buildings, you would be looking at the average EUI for over 10 different offices in Minneapolis. If we    were instead looking at private office buildings, then we would be looking at the average EUI of least 26 (more than 25) offices.

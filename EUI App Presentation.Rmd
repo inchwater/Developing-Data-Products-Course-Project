@@ -1,0 +1,29 @@
+---
+title: "Energy Use Intensity (EUI) App"
+author: "SP"
+date: "April 6, 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+- This app allows a user to see the average energy use intensity (EUI) for a given building type and a given use type.
+- The EUI is the energy used to operate a building. This would usually involve electric appliances, gas heating, building mechanical systems, etc.
+- The City of Minneapolis has made this available for the years 2014-17 
+- The data can be downloaded here: http://www.minneapolismn.gov/environment/energy/benchmarking
+
+## How to use the app
+
+- Select the building type from the drop-down:private or public
+- Select the building-use type from the drop-down
+- Options for public buildings are: school, office, parking, other
+- Options for private buildings are: office, parking, hotel and multi-use assembly
+- The app will show the average EUI for each year for that a particular bulding type and use-type
+
+
+
+
